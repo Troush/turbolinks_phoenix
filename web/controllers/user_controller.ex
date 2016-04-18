@@ -61,7 +61,7 @@ defmodule TurbolinksPhoenix.UserController do
     Repo.delete!(user)
 
     conn
-    |> put_flash(:info, "User deleted successfully.")
+    |> put_flash(:info, "User with id: #{id} deleted successfully.")
     |> redirect(to: user_path(conn, :index))
   end
 end
